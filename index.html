@@ -38,7 +38,8 @@
 
                 </label>
 
-                <button id="handle-search" class="bg-[#0D6EFD] text-white py-3 px-8 rounded-lg">Search</button>
+                <button onclick="handleSearch()" id="handle-search"
+                    class="bg-[#0D6EFD] text-white py-3 px-8 rounded-lg">Search</button>
             </div>
         </section>
 
@@ -58,11 +59,41 @@
 
             <div class="text-center hidden mt-5" id="show-all">
 
-                <button class="btn bg-[#0D6EFD] hover:bg-[#0D6EFD] text-white font-medium text-xl">Show All</button>
+                <button onclick="showAll()"
+                    class="btn bg-[#0D6EFD] hover:bg-[#0D6EFD] text-white font-medium text-xl">Show All</button>
 
             </div>
 
 
+
+            <!-- ================= Modal ====================== -->
+
+            <!-- You can open the modal using ID.showModal() method -->
+          
+            <dialog id="show_modal_detail" class="modal">
+                <div class="modal-box w-11/12 max-w-5xl">
+
+                    <figure>
+                        <img id="phone-image" src="" alt="">
+                    </figure>
+                    <h3 id="phone-title" class="font-bold text-lg">Hello!</h3>
+                    <p class="py-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <h3>Storage : <span id="storage"></span></h3>
+                    <p>Display Size : <span id="display-size"></span></p>
+                    <p>Chipset : <span id="chipset"></span></p>
+                    <p>Memory : <span id="memory"></span></p>
+                    <p>Slug : <span id="slug"></span></p>
+                    <p>Release Date : <span id="release-date"></span></p>
+                    <p>Brand : <span id="brand"></span></p>
+                    <p>GPS : <span id="gps">No, GLONASS, GALILEO, BDS, QZSS</span></p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
 
         </section>
     </main>
